@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* centering div */
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* 100vh = 100% */
+}
+
+* {
+    font-family: poppins;
+    box-sizing: border-box;
+}
+
+.card {
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0,0.5);
+    overflow: hidden;
+    border-radius: 9px;
+    display: flex;
+    width: fit-content;
+}
+
+img {
+    transition: ease 0.5s;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+img, .card-content {
+    float: left;
+}
+
+.card-content {
+    padding: 0 19px;
+    color: whitesmoke;
+    background-color: black;
+}
+
+.up {
+    display: none;
+}
+
+.card-content h4 {
+    margin-bottom: 1px;
+}
+
+ul.desc {
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+    padding: 0;
+    margin: 4px 0;
+    color: gray;
+    font-size: small;
+    list-style-position: inside;
+    float: left;
+    width: 70%;
+}
+
+ul.ratting {
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+    padding: 0;
+    margin: 4px 0;
+    color: gold;
+    font-size: small;
+    list-style-type: none;
+    float: left;
+    width: 30%;
+}
+
+ul.button {
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+    padding: 0;
+    margin: 4px 0;
+    font-size: small;
+    list-style-type: none;
+    width: 100%;
+}
+
+button {
+    transition: ease 0.5s;
+    border: 1px solid whitesmoke;
+    background-color: transparent;
+    color: white;
+    border-radius: 5px;
+}
+
+button:hover {
+    border: 1px solid gray;
+    color: gray;
+}
+
+.border {
+    padding: 10px 0;
+    border-top: 1px solid gray;
+}
+
+.border span {
+    color: dodgerblue;
+}
+
+ul.border {
+    display: flex;
+    list-style-position: inside;
+    justify-content: start;
+    gap: 10px;
+    color: dodgerblue;
+}
+
+ul.border li::marker {
+    color: gray;
+}
+
+ul.border li:nth-child(1) {
+    list-style-type: none;
+    color: white;
+}
+
+/* responsive */
+@media screen and (max-width:900px) {
+    .card {
+        display: block;
+        height: 380px;
+        overflow-y: scroll;
+    }
+
+    /* scroll bar */
+    /* width */
+    ::-webkit-scrollbar {
+    width: 1px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0); 
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+    background:  rgba(0, 0, 0, 0); 
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+    background:  rgba(0, 0, 0, 0); 
+    }
+
+    .card img {
+        position: fixed;
+        border-radius: 9px;
+    }
+
+    img:hover {
+        transform: scale(1);
+    }
+
+    .card-content {
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        width: 250px;
+        margin-top: 350px;
+        transition: ease 0.5s;
+    }
+
+    .card-content:hover {
+        margin-top: 50px;
+    }
+
+    p.up {
+        display: block;
+        text-align: center;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        margin-top: 0;
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+    }
+
+    ul.desc {
+        float: none;
+        width: 100%;
+    }
+    
+    ul.ratting {
+        float: none;
+        width: 100%;
+    }
+
+    ul.border {
+        display: block;
+    }
+}
